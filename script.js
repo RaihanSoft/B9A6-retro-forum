@@ -83,11 +83,9 @@ const displayAllPosts = (posts) => {
 }
 
 
-let count = 1
+
 const card=(description, view)=>{
 
-    const markAsReadCounter =document.getElementById('markAsReadCounter')
-    markAsReadCounter.innerText = count++
     const markAsReadContainer = document.getElementById('markAsReadContainer')
     
     const div = document.createElement('div')
@@ -105,8 +103,16 @@ const card=(description, view)=>{
     
     `
     markAsReadContainer.appendChild(div)
+    count()
     
 
+}
+const count=()=>{
+    const markAsReadCounter = Number(document.getElementById('markAsReadCounter').innerHTML)
+   let sum = markAsReadCounter + 1
+   document.getElementById('markAsReadCounter').innerText = sum
+
+    
 }
 
 
